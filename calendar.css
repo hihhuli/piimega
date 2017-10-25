@@ -1,0 +1,89 @@
+.display-none {
+    display: none;
+}
+
+.calendar {
+    font-family: Verdana, sans-serif;
+    width: 50%;
+}
+
+.calendar button {
+    border: none;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.picker {
+    background-color: #1abc9c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picker button {
+    background-color: #1abc9c;
+}
+
+.arrow {
+    padding: 1rem;
+}
+
+.picker-titles button {
+    color: white;
+}
+
+.picker-title {
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.picker-subtitle {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.calendar-contents {
+    color: #777;
+    background-color: #eee;
+}
+
+.weekdays {
+    display: flex;
+    padding: 0.5rem;
+    background-color: #ddd;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.date-selectables {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.date-selected {
+    background-color: #1abc9c;
+}
+
+.date-unselected {
+    background-color: #eee;
+}
+
+.weekdays div, .date-row button {
+    width: 2rem;
+    text-align: center;
+    padding: 0.1rem;
+}
