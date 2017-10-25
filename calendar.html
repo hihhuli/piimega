@@ -9,7 +9,7 @@
     <body onload="initCalendar()">    
 	<div class="calendar">      
 	    <div class="picker">
-		<button class="arrow">&#10094;</button>
+		<button class="arrow" onclick="selectPrevious()">&#10094;</button>
 		<div class="picker-titles">
                     <div class="picker-title">
                         <button id="month-title" onclick="switchToMonthView()">August</button>
@@ -19,7 +19,7 @@
 		        <button id="year-subtitle" onclick="switchToYearView()">2017</button>
                     </div>
 		</div>
-		<button class="arrow">&#10095;</button>
+		<button class="arrow" onclick="selectNext()">&#10095;</button>
 	    </div>
 
 	    <div class="calendar-contents">
@@ -32,7 +32,7 @@
 		    <div>Sa</div>
 		    <div>Su</div>
 		</div>
-
+                
 		<div id="days" class="date-selectables">
 		    <div class="date-row">
 			<button id="day-button1" onclick="selectDay(this.value)"></button>
@@ -82,29 +82,34 @@
 		    <div class="date-row">
 			<button id="day-button36" onclick="selectDay(this.value)"></button>
 			<button id="day-button37" onclick="selectDay(this.value)"></button>
+                        <button id="day-button38" onclick="selectDay(this.value)"></button>
+			<button id="day-button39" onclick="selectDay(this.value)"></button>
+                        <button id="day-button40" onclick="selectDay(this.value)"></button>
+			<button id="day-button41" onclick="selectDay(this.value)"></button>
+                        <button id="day-button42" onclick="selectDay(this.value)"></button>
 		    </div>
 		</div>
 
 		<div id="months" class="display-none">
 		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(1)">Jan</button>
-			<button class="date-unselected" onclick="selectMonth(2)">Feb</button>
-			<button class="date-unselected" onclick="selectMonth(3)">Mar</button>
+			<button class="date-unselected" onclick="selectMonth(0)">Jan</button>
+			<button class="date-unselected" onclick="selectMonth(1)">Feb</button>
+			<button class="date-unselected" onclick="selectMonth(2)">Mar</button>
 		    </div>
 		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(4)">Apr</button>
-			<button class="date-unselected" onclick="selectMonth(5)">May</button>
-			<button class="date-unselected" onclick="selectMonth(6)">Jun</button>
+			<button class="date-unselected" onclick="selectMonth(3)">Apr</button>
+			<button class="date-unselected" onclick="selectMonth(4)">May</button>
+			<button class="date-unselected" onclick="selectMonth(5)">Jun</button>
 		    </div>
 		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(7)">Jul</button>
-			<button class="date-unselected" onclick="selectMonth(8)">Aug</button>
-			<button class="date-unselected" onclick="selectMonth(9)">Sep</button>
+			<button class="date-unselected" onclick="selectMonth(6)">Jul</button>
+			<button class="date-unselected" onclick="selectMonth(7)">Aug</button>
+			<button class="date-unselected" onclick="selectMonth(8)">Sep</button>
 		    </div>
 		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(10)">Oct</button>
-			<button class="date-unselected" onclick="selectMonth(11)">Nov</button>
-			<button class="date-unselected" onclick="selectMonth(12)">Dec</button>
+			<button class="date-unselected" onclick="selectMonth(9)">Oct</button>
+			<button class="date-unselected" onclick="selectMonth(10)">Nov</button>
+			<button class="date-unselected" onclick="selectMonth(11)">Dec</button>
 		    </div>
 		</div>
 

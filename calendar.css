@@ -9,7 +9,14 @@
 
 .calendar button {
     border: none;
+}
+
+.calendar button:enabled {
     cursor: pointer;
+}
+
+.calendar button:disabled {
+    cursor: arrow;
 }
 
 button::-moz-focus-inner {
