@@ -1,0 +1,5 @@
+./bin/phpstorm.sh
+Settings -> Languages & Frameworks -> PHP -> Aseta PHP Cli
+sudo apt install phpunit
+Settings -> Languages & Frameworks -> PHP -> Test frameworks -> Aseta PHPUnit 
+sudo apt-get install php7.0-cgi

@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<title>Interactive calendar</title>
+        <title>Interactive calendar</title>
         <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="calendar.css">
+        <link rel="stylesheet" type="text/css" href="calendar.css">
         <script src="calendar.js" type="text/javascript"></script>
     </head>
     <body onload="initCalendar()">    
-	<div class="calendar">      
-	    <div class="picker">
-		<button class="arrow" onclick="selectPrevious()">&#10094;</button>
-		<div class="picker-titles">
+        <div class="calendar">      
+            <div class="picker">
+                <button class="arrow" onclick="selectPrevious()">&#10094;</button>
+                <div class="picker-titles">
                     <div class="picker-title">
                         <button id="month-title" onclick="switchToMonthView()">August</button>
                         <button id="year-title" class="display-none" onclick="switchToYearView()">2017</button>
                     </div>
                     <div class="picker-subtitle">
-		        <button id="year-subtitle" onclick="switchToYearView()">2017</button>
+                        <button id="year-subtitle" onclick="switchToYearView()">2017</button>
                     </div>
-		</div>
-		<button class="arrow" onclick="selectNext()">&#10095;</button>
-	    </div>
+                </div>
+                <button class="arrow" onclick="selectNext()">&#10095;</button>
+            </div>
 
-	    <div class="calendar-contents">
-		<div id="weekdays" class="weekdays">
-		    <div>Mo</div>
-		    <div>Tu</div>
-		    <div>We</div>
-		    <div>Th</div>
-		    <div>Fr</div>
-		    <div>Sa</div>
-		    <div>Su</div>
-		</div>
+            <div class="calendar-contents">
+                <div id="weekdays" class="weekdays">
+                    <div>Mo</div>
+                    <div>Tu</div>
+                    <div>We</div>
+                    <div>Th</div>
+                    <div>Fr</div>
+                    <div>Sa</div>
+                    <div>Su</div>
+                </div>
                 
-		<div id="days" class="date-selectables">
-		    <div class="date-row">
-			<button id="day-button1" onclick="selectDay(this.value)"></button>
-			<button id="day-button2" onclick="selectDay(this.value)"></button>
-			<button id="day-button3" onclick="selectDay(this.value)"></button>
-			<button id="day-button4" onclick="selectDay(this.value)"></button>
-			<button id="day-button5" onclick="selectDay(this.value)"></button>
-			<button id="day-button6" onclick="selectDay(this.value)"></button>
+                <div id="days" class="date-selectables">
+                    <div class="date-row">
+                        <button id="day-button1" onclick="selectDay(this.value)"></button>
+                        <button id="day-button2" onclick="selectDay(this.value)"></button>
+                        <button id="day-button3" onclick="selectDay(this.value)"></button>
+                        <button id="day-button4" onclick="selectDay(this.value)"></button>
+                        <button id="day-button5" onclick="selectDay(this.value)"></button>
+                        <button id="day-button6" onclick="selectDay(this.value)"></button>
                         <button id="day-button7" onclick="selectDay(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="day-button8" onclick="selectDay(this.value)"></button>
-			<button id="day-button9" onclick="selectDay(this.value)"></button>
-			<button id="day-button10" onclick="selectDay(this.value)"></button>
-			<button id="day-button11" onclick="selectDay(this.value)"></button>
-			<button id="day-button12" onclick="selectDay(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="day-button8" onclick="selectDay(this.value)"></button>
+                        <button id="day-button9" onclick="selectDay(this.value)"></button>
+                        <button id="day-button10" onclick="selectDay(this.value)"></button>
+                        <button id="day-button11" onclick="selectDay(this.value)"></button>
+                        <button id="day-button12" onclick="selectDay(this.value)"></button>
                         <button id="day-button13" onclick="selectDay(this.value)"></button>
-			<button id="day-button14" onclick="selectDay(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="day-button15" onclick="selectDay(this.value)"></button>
-			<button id="day-button16" onclick="selectDay(this.value)"></button>
-			<button id="day-button17" onclick="selectDay(this.value)"></button>
+                        <button id="day-button14" onclick="selectDay(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="day-button15" onclick="selectDay(this.value)"></button>
+                        <button id="day-button16" onclick="selectDay(this.value)"></button>
+                        <button id="day-button17" onclick="selectDay(this.value)"></button>
                         <button id="day-button18" onclick="selectDay(this.value)"></button>
-			<button id="day-button19" onclick="selectDay(this.value)"></button>
-			<button id="day-button20" onclick="selectDay(this.value)"></button>
-			<button id="day-button21" onclick="selectDay(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="day-button22" onclick="selectDay(this.value)"></button>
+                        <button id="day-button19" onclick="selectDay(this.value)"></button>
+                        <button id="day-button20" onclick="selectDay(this.value)"></button>
+                        <button id="day-button21" onclick="selectDay(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="day-button22" onclick="selectDay(this.value)"></button>
                         <button id="day-button23" onclick="selectDay(this.value)"></button>
-			<button id="day-button24" onclick="selectDay(this.value)"></button>
-			<button id="day-button25" onclick="selectDay(this.value)"></button>
-			<button id="day-button26" onclick="selectDay(this.value)"></button>
-			<button id="day-button27" onclick="selectDay(this.value)"></button>
-			<button id="day-button28" onclick="selectDay(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="day-button29" onclick="selectDay(this.value)"></button>
-			<button id="day-button30" onclick="selectDay(this.value)"></button>
-			<button id="day-button31" onclick="selectDay(this.value)"></button>
-			<button id="day-button32" onclick="selectDay(this.value)"></button>
-			<button id="day-button33" onclick="selectDay(this.value)"></button>
-			<button id="day-button34" onclick="selectDay(this.value)"></button>
-			<button id="day-button35" onclick="selectDay(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="day-button36" onclick="selectDay(this.value)"></button>
-			<button id="day-button37" onclick="selectDay(this.value)"></button>
+                        <button id="day-button24" onclick="selectDay(this.value)"></button>
+                        <button id="day-button25" onclick="selectDay(this.value)"></button>
+                        <button id="day-button26" onclick="selectDay(this.value)"></button>
+                        <button id="day-button27" onclick="selectDay(this.value)"></button>
+                        <button id="day-button28" onclick="selectDay(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="day-button29" onclick="selectDay(this.value)"></button>
+                        <button id="day-button30" onclick="selectDay(this.value)"></button>
+                        <button id="day-button31" onclick="selectDay(this.value)"></button>
+                        <button id="day-button32" onclick="selectDay(this.value)"></button>
+                        <button id="day-button33" onclick="selectDay(this.value)"></button>
+                        <button id="day-button34" onclick="selectDay(this.value)"></button>
+                        <button id="day-button35" onclick="selectDay(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="day-button36" onclick="selectDay(this.value)"></button>
+                        <button id="day-button37" onclick="selectDay(this.value)"></button>
                         <button id="day-button38" onclick="selectDay(this.value)"></button>
-			<button id="day-button39" onclick="selectDay(this.value)"></button>
+                        <button id="day-button39" onclick="selectDay(this.value)"></button>
                         <button id="day-button40" onclick="selectDay(this.value)"></button>
-			<button id="day-button41" onclick="selectDay(this.value)"></button>
+                        <button id="day-button41" onclick="selectDay(this.value)"></button>
                         <button id="day-button42" onclick="selectDay(this.value)"></button>
-		    </div>
-		</div>
+                    </div>
+                </div>
 
-		<div id="months" class="display-none">
-		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(0)">Jan</button>
-			<button class="date-unselected" onclick="selectMonth(1)">Feb</button>
-			<button class="date-unselected" onclick="selectMonth(2)">Mar</button>
-		    </div>
-		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(3)">Apr</button>
-			<button class="date-unselected" onclick="selectMonth(4)">May</button>
-			<button class="date-unselected" onclick="selectMonth(5)">Jun</button>
-		    </div>
-		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(6)">Jul</button>
-			<button class="date-unselected" onclick="selectMonth(7)">Aug</button>
-			<button class="date-unselected" onclick="selectMonth(8)">Sep</button>
-		    </div>
-		    <div class="date-row">
-			<button class="date-unselected" onclick="selectMonth(9)">Oct</button>
-			<button class="date-unselected" onclick="selectMonth(10)">Nov</button>
-			<button class="date-unselected" onclick="selectMonth(11)">Dec</button>
-		    </div>
-		</div>
+                <div id="months" class="display-none">
+                    <div class="date-row">
+                        <button class="date-unselected" onclick="selectMonth(0)">Jan</button>
+                        <button class="date-unselected" onclick="selectMonth(1)">Feb</button>
+                        <button class="date-unselected" onclick="selectMonth(2)">Mar</button>
+                    </div>
+                    <div class="date-row">
+                        <button class="date-unselected" onclick="selectMonth(3)">Apr</button>
+                        <button class="date-unselected" onclick="selectMonth(4)">May</button>
+                        <button class="date-unselected" onclick="selectMonth(5)">Jun</button>
+                    </div>
+                    <div class="date-row">
+                        <button class="date-unselected" onclick="selectMonth(6)">Jul</button>
+                        <button class="date-unselected" onclick="selectMonth(7)">Aug</button>
+                        <button class="date-unselected" onclick="selectMonth(8)">Sep</button>
+                    </div>
+                    <div class="date-row">
+                        <button class="date-unselected" onclick="selectMonth(9)">Oct</button>
+                        <button class="date-unselected" onclick="selectMonth(10)">Nov</button>
+                        <button class="date-unselected" onclick="selectMonth(11)">Dec</button>
+                    </div>
+                </div>
 
-		<div id="years" class="display-none">
-		    <div class="date-row">
-			<button id="year-button1" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button2" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button3" class="date-unselected" onclick="selectYear(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="year-button4" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button5" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button6" class="date-unselected" onclick="selectYear(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="year-button7" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button8" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button9" class="date-unselected" onclick="selectYear(this.value)"></button>
-		    </div>
-		    <div class="date-row">
-			<button id="year-button10" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button11" class="date-unselected" onclick="selectYear(this.value)"></button>
-			<button id="year-button12" class="date-unselected" onclick="selectYear(this.value)"></button>
-		    </div>
-		</div>
-	    </div>
-	</div>
+                <div id="years" class="display-none">
+                    <div class="date-row">
+                        <button id="year-button1" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button2" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button3" class="date-unselected" onclick="selectYear(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="year-button4" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button5" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button6" class="date-unselected" onclick="selectYear(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="year-button7" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button8" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button9" class="date-unselected" onclick="selectYear(this.value)"></button>
+                    </div>
+                    <div class="date-row">
+                        <button id="year-button10" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button11" class="date-unselected" onclick="selectYear(this.value)"></button>
+                        <button id="year-button12" class="date-unselected" onclick="selectYear(this.value)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

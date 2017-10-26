@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Form submission</title>
+        <title>Signin</title>
     </head>
     <body>
-        <form action="send_mail.php" method="post">
+        <form action="validate_credentials.php" method="post">
             <div>
                 <span>First Name:</span>
 	        <input type="text" name="first_name">
@@ -18,12 +18,12 @@
 	        <input type="text" name="email">
             </div>
             <div>
-                <span>Subject:</span>
-	        <input type="text" name="subject">
+                <span>Password:</span>
+	        <input type="text" name="password" password>
             </div>
             <div>
-                <span>Message:</span>
-                <textarea rows="5" name="message" cols="30"></textarea>
+                <span>Password again:</span>
+                <input type="text" name="password-again">
             </div>
             <div><input type="submit" name="submit" value="Submit"></div>
         </form>
