@@ -55,22 +55,6 @@ function populateDays(date) {
     }
 }
 
-function selectDay(day) {
-    for (let i = 0; i < DAY_SLOTS_N; i++) {
-        const dayIndex = i + 1;
-        const elemId = "day-button" + dayIndex;
-        let dayButton = document.getElementById(elemId);
-        console.log(typeof dayButton.value);
-        console.log(typeof day);
-
-        if (dayButton.value === day) {
-            dayButton.className = "date-selected";
-        } else {
-            dayButton.className = "date-unselected";
-        }
-    }
-}
-
 function populateYears(date) {
     const lastYear = date.getFullYear();
     const firstYear = lastYear - YEAR_SLOTS_N + 1;
@@ -81,6 +65,20 @@ function populateYears(date) {
         yearButton.value = firstYear + i;
         yearButton.innerHTML = firstYear + i;
     }
+}
+
+function selectDay(day) {
+    for (let i = 0; i < DAY_SLOTS_N; i++) {
+        const dayIndex = i + 1;
+        const elemId = "day-button" + dayIndex;
+        let dayButton = document.getElementById(elemId);
+        if (dayButton.value === day) {
+            dayButton.className = "date-selected";
+        } else {
+            dayButton.className = "date-unselected";
+        }
+    }
+    getDescription(parseInt(day));
 }
 
 function showElement(elemId, visibleClass) {
@@ -199,4 +197,39 @@ function initCalendar() {
     selectDay(selectedDate.getDate().toString());
     setMonthTitle(selectedDate.getMonth());
     setYearTitles(selectedDate.getFullYear());
+}
+
+function getDescription(day) {
+    let data = {
+        day: day,
+        month: selectedDate.getMonth(),
+        year: selectedDate.getFullYear(),
+    }
+    console.log(data);
+    /*$.ajax({
+        type: "GET",
+        url: "reservation.php",
+        data: data,
+        success: function(data) {
+            document.getElementById("description").value = data.description;
+        }
+    });*/
+}
+
+function postDescription() {
+    let data = {
+        day: selectedDate.getDate(),
+        month: selectedDate.getMonth(),
+        year: selectedDate.getFullYear(),
+        description: document.getElementById("description").value
+    }
+    console.log(data);
+    /*$.ajax({
+        type: "POST",
+        url: "reservation.php",
+        data: data,
+        success: function(data) {
+            console.log(data);
+        }
+    });*/
 }

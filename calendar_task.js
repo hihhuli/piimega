@@ -30,45 +30,9 @@ let displayed = DAYS_DISPLAYED;
 let selectedDate = new Date();
 
 function populateDays(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const firstDay = new Date(year, month);
-    const lastDay = new Date(year, month + 1, 0);
-    const calDaysStart = (firstDay.getDay() + DAYS_IN_WEEK - 1) % DAYS_IN_WEEK + 1;
-    const calDaysEnd = lastDay.getDate() + calDaysStart - 1;
-    
-    for (let i = 0; i < DAY_SLOTS_N; i++) {
-        const dayIndex = i + 1;
-        const day = dayIndex - calDaysStart + 1;
-        const elemId = "day-button" + dayIndex;
-        let dayButton = document.getElementById(elemId);
-        
-        if (dayIndex < calDaysStart || dayIndex > calDaysEnd) {
-            dayButton.value = "";
-            dayButton.innerHTML = "";
-            dayButton.disabled = true;
-        } else {
-            dayButton.value = day;
-            dayButton.innerHTML = day;
-            dayButton.disabled = false;
-        }
-    }
 }
 
 function selectDay(day) {
-    for (let i = 0; i < DAY_SLOTS_N; i++) {
-        const dayIndex = i + 1;
-        const elemId = "day-button" + dayIndex;
-        let dayButton = document.getElementById(elemId);
-        console.log(typeof dayButton.value);
-        console.log(typeof day);
-
-        if (dayButton.value === day) {
-            dayButton.className = "date-selected";
-        } else {
-            dayButton.className = "date-unselected";
-        }
-    }
 }
 
 function populateYears(date) {
@@ -160,7 +124,7 @@ function switchToYearView() {
 
 function selectYear(year) {
     selectedDate = new Date(year, 1);
-    switchToMonthView();    
+    switchToMonthView();
     setYearTitles(selectedDate.getFullYear());
 }
 
