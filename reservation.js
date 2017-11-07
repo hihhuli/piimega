@@ -78,7 +78,8 @@ function selectDay(day) {
             dayButton.className = "date-unselected";
         }
     }
-    getDescription(parseInt(day));
+    selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), parseInt(day));
+    getDescription();
 }
 
 function showElement(elemId, visibleClass) {
@@ -199,37 +200,37 @@ function initCalendar() {
     setYearTitles(selectedDate.getFullYear());
 }
 
-function getDescription(day) {
+function getDescription() {
     let data = {
-        day: day,
-        month: selectedDate.getMonth(),
+        day: selectedDate.getDate(),
+        month: selectedDate.getMonth() + 1,
         year: selectedDate.getFullYear(),
     }
     console.log(data);
-    /*$.ajax({
+    $.ajax({
         type: "GET",
         url: "reservation.php",
         data: data,
-        success: function(data) {
-            document.getElementById("description").value = data.description;
+        success: function(result) {
+            document.getElementById("description").value = result;
         }
-    });*/
+    });
 }
 
 function postDescription() {
     let data = {
         day: selectedDate.getDate(),
-        month: selectedDate.getMonth(),
+        month: selectedDate.getMonth() + 1,
         year: selectedDate.getFullYear(),
         description: document.getElementById("description").value
     }
     console.log(data);
-    /*$.ajax({
-        type: "POST",
+    $.ajax({
+        type: "PUT",
         url: "reservation.php",
         data: data,
-        success: function(data) {
-            console.log(data);
+        success: function(result) {
+            alert(result);
         }
-    });*/
+    });
 }
