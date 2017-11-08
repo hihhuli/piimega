@@ -2,22 +2,22 @@
 <html>
   <head>
     <script>
-      //Adapted from https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
-      
-      function tickClock() {
-        let now = new Date();
-        let h = now.getHours();
-        let m = now.getMinutes();
-        let s = now.getSeconds();
-        m = formatWithLeadingZero(m);
-        s = formatWithLeadingZero(s);
-        document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
-        setTimeout(tickClock, 500);
-      }
+     //Adapted from https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+     
+     function tickClock() {
+       let now = new Date();
+       let h = now.getHours();
+       let m = now.getMinutes();
+       let s = now.getSeconds();
+       m = formatWithLeadingZero(m);
+       s = formatWithLeadingZero(s);
+       document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+       setTimeout(tickClock, 500);
+     }
 
-      function formatWithLeadingZero(d) {
-        return (d < 10) ? "0" + d : d;
-      }
+     function formatWithLeadingZero(d) {
+       return (d < 10) ? "0" + d : d;
+     }
     </script>
   </head>
   <body onload="tickClock()">
